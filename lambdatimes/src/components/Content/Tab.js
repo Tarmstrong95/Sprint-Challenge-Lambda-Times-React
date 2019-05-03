@@ -4,11 +4,19 @@ const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-      
+      const isActive = () => {
+        if(props.tab !== props.selectedTab){
+          return 'tab'
+        }else{
+          return 'tab active-tab'
+        }
+      }
   return (
     <div
-      className={''}
-      onClick={props.selectTabHandler(props.tab)}
+      className={isActive()}
+      onClick={(e) => {
+        props.selectTabHandler(props.tab)
+      }}
     >
       {props.tab.toUpperCase()}
     </div>
