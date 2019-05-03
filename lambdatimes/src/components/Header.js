@@ -5,10 +5,10 @@ import {MainHeader, Date, Temp, HeaderH1} from './StyledComponents'
 
 const Header = () => {
   return (
-    <MainHeader className="header">
-      <Date className="date">SMARCH 32, 2018</Date>
+    <MainHeader >
+      <Date >SMARCH 32, 2018</Date>
       <HeaderH1>Lambda Times</HeaderH1>
-      <Temp className="temp">98°</Temp>
+      <Temp >98°</Temp>
     </MainHeader>
   )
 }
