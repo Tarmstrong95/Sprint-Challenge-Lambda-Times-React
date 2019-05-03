@@ -1,8 +1,9 @@
 import React from 'react';
-import {MainTopBar, 
-  TopBarContainer, 
+import {
+  MainTopBar,
+  TopBarContainer,
   ContainerLeft,
-  ContainerSpanLeft, 
+  ContainerSpanLeft,
   ContainerCenter,
   ContainerSpanCenter,
   ContainerRight,
@@ -27,7 +28,7 @@ const TopBar = () => {
           <ContainerSpanCenter>ANNOUNCEMENTS</ContainerSpanCenter>
         </ContainerCenter>
         <ContainerRight >
-          <ContainerSpanRight>LOG IN</ContainerSpanRight>
+          <ContainerSpanRight>LOGIN</ContainerSpanRight>
         </ContainerRight>
       </TopBarContainer>
     </MainTopBar>

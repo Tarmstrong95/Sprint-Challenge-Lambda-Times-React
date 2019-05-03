@@ -53,6 +53,7 @@ width: 100%;
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 5;
 `
 export const TopBarContainer = styled.div`
 width: 100%;

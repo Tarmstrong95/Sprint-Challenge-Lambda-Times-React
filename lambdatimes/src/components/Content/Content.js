@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
+import Carousel from '../Carousel/Carousel';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -28,7 +28,7 @@ export default class Content extends Component {
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
     this.setState({
-      ...this.state, 
+      ...this.state,
       selected: tab
     })
   };
@@ -46,17 +46,18 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-     if(this.state.selected === 'all'){
-       return this.state.cards
-     }else {
-       return this.state.cards.filter(card => card.tab === this.state.selected)
-     }
+    if (this.state.selected === 'all') {
+      return this.state.cards
+    } else {
+      return this.state.cards.filter(card => card.tab === this.state.selected)
+    }
   };
 
   render() {
     return (
       <div className="content-container">
         <Tabs selectedTab={this.state.selected} selectTabHandler={this.changeSelected} tabs={this.state.tabs} />
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     );
